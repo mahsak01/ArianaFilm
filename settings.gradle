@@ -1,0 +1,25 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven {url "https://maven.google.com"}
+        maven { url "http://dl.bintray.com/ipgeolocation/ipgeolocation"
+            allowInsecureProtocol = true}
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven {url "https://jitpack.io"}
+        maven {url "https://maven.google.com"}
+
+    }
+}
+rootProject.name = "ArianaFilm"
+include ':app'
+include ':android-file-chooser'
+include ':doubletapplayerview'

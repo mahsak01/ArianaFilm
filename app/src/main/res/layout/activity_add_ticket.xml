@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_screen"
+        android:layoutDirection="rtl">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/background_transparent_item_setting"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/ActivityAddTicketSetting_backBtn"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_back1_setting"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/ActivityAddTicketSetting_titletv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="افزودن تیکت"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/estedad_light"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/ActivityAddTicketSetting_addBtn"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/estedad_light"
+                    android:text="موضوع"
+                    android:textColor="@color/white"
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/ActivityAddTicketSetting_titleTI"
+                    style="Theme.ArianaFilm.AuthTheme.EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/edit_text_box_border"
+                    android:drawablePadding="30dp"
+                    android:fontFamily="@font/estedad_light"
+                    android:maxLength="50"
+                    android:padding="15dp"
+                    android:textColor="@color/white"
+                    android:textDirection="rtl" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/estedad_light"
+                    android:text="دپارتمان"
+                    android:textColor="@color/white"
+                    android:textSize="14dp" />
+
+
+                <Spinner
+                    android:id="@+id/ActivityAddTicketSetting_departmentTI"
+                    style="Theme.ArianaFilm.AuthTheme.EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/edit_text_box_border"
+                    android:drawablePadding="30dp"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:fontFamily="@font/estedad_light"
+                    android:padding="15dp"
+                    android:popupBackground="@color/transparent"
+                    android:textDirection="rtl" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/estedad_light"
+                    android:text="اولویت"
+                    android:textColor="@color/white"
+                    android:textSize="14dp" />
+
+                <Spinner
+                    android:id="@+id/ActivityAddTicketSetting_priorityTI"
+                    style="Theme.ArianaFilm.AuthTheme.EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/edit_text_box_border"
+                    android:drawablePadding="30dp"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:fontFamily="@font/estedad_light"
+                    android:padding="15dp"
+                    android:popupBackground="@color/transparent"
+                    android:textColor="@color/white"
+                    android:textDirection="rtl" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/estedad_light"
+                    android:text="پیام"
+                    android:textColor="@color/white"
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/ActivityAddTicketSetting_messageTI"
+                    style="Theme.ArianaFilm.AuthTheme.EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/edit_text_box_border"
+                    android:drawablePadding="30dp"
+                    android:fontFamily="@font/estedad_light"
+                    android:gravity="top"
+                    android:minHeight="200dp"
+                    android:padding="15dp"
+                    android:textColor="@color/white"
+                    android:textDirection="rtl" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/ActivityAddTicketSetting_fileBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/edit_text_box_border"
+                        android:drawableStart="@drawable/ic_round_attach_file_24"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/estedad_light"
+                        android:padding="15dp"
+                        android:text="پیوست فایل"
+                        android:textColor="@color/white" />
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+        <TextView
+            android:id="@+id/ActivityAddTicketSetting_addBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/background_red_button_setting"
+            android:paddingStart="30dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="30dp"
+            android:paddingBottom="10dp"
+            android:fontFamily="@font/estedad_light"
+            android:text="ارسال تیکت"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

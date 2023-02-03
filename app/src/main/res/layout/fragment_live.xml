@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_screen"
+        android:layoutDirection="rtl"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/background_transparent_item_setting"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/fragmentLive_backBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:padding="5dp"
+                android:nextFocusDown="@id/fragmentLive_itemRv"
+                android:nextFocusLeft="@id/fragmentLive_itemRv"
+                android:nextFocusUp="@+id/fragmentLive_backBtn"
+                android:nextFocusRight="@+id/fragmentLive_backBtn"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_back1_setting"/>
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/fragmentLive_titletv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="پخش زنده"
+                android:fontFamily="@font/estedad_light"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
+
+                    <LinearLayout
+                        android:id="@+id/fragmentBanner_bannerSliderLl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/frameLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.viewpager2.widget.ViewPager2
+                                android:id="@+id/fragmentBanner_bannerSliderVp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+                            android:id="@+id/fragmentBanner_bannerSliderDi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/background_red_button_setting"
+                            android:backgroundTint="@color/transparent"
+                            android:padding="5dp"
+                            app:dotsColor="@color/white"
+                            app:dotsCornerRadius="8dp"
+                            app:dotsSize="7dp"
+                            app:dotsSpacing="3dp"
+                            app:dotsWidthFactor="1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/frameLayout"
+                            app:progressMode="false"
+                            app:selectedDotColor="@color/red" />
+                    </LinearLayout>
+
+                    <com.facebook.shimmer.ShimmerFrameLayout
+                        android:id="@+id/fragmentLive_bannerSliderShimmer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_margin="10dp"
+                            android:background="@color/shimmer_placeholder"
+                            android:padding="10dp" />
+                    </com.facebook.shimmer.ShimmerFrameLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--on below line we are creating a grid view-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/fragmentLive_itemRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:horizontalSpacing="5dp"
+                    android:layoutDirection="ltr"
+                    android:scrollbars="horizontal"
+                    android:verticalSpacing="5dp"
+                    android:visibility="gone">
+
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/fragmentLive_itemRvShimmer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:horizontalSpacing="5dp"
+                            android:scrollbars="horizontal"
+                            android:verticalSpacing="5dp">
+
+                            <include layout="@layout/layout_shimmer_live_item_channel" />
+
+                            <include layout="@layout/layout_shimmer_live_item_channel" />
+
+                            <include layout="@layout/layout_shimmer_live_item_channel" />
+
+                            <include layout="@layout/layout_shimmer_live_item_channel" />
+
+                            <include layout="@layout/layout_shimmer_live_item_channel" />
+
+                            <include layout="@layout/layout_shimmer_live_item_channel" />
+
+                            <include layout="@layout/layout_shimmer_live_item_channel" />
+
+                            <include layout="@layout/layout_shimmer_live_item_channel" />
+
+                            <include layout="@layout/layout_shimmer_live_item_channel" />
+
+                            <include layout="@layout/layout_shimmer_live_item_channel" />
+
+                            <include layout="@layout/layout_shimmer_live_item_channel" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:horizontalSpacing="5dp"
+                            android:scrollbars="horizontal"
+                            android:verticalSpacing="5dp">
+
+                            <include layout="@layout/layout_shimmer_live_item_channel" />
+
+                            <include layout="@layout/layout_shimmer_live_item_channel" />
+
+                            <include layout="@layout/layout_shimmer_live_item_channel" />
+
+                            <include layout="@layout/layout_shimmer_live_item_channel" />
+
+                            <include layout="@layout/layout_shimmer_live_item_channel" />
+
+                            <include layout="@layout/layout_shimmer_live_item_channel" />
+
+                            <include layout="@layout/layout_shimmer_live_item_channel" />
+
+                            <include layout="@layout/layout_shimmer_live_item_channel" />
+
+                            <include layout="@layout/layout_shimmer_live_item_channel" />
+
+                            <include layout="@layout/layout_shimmer_live_item_channel" />
+
+                            <include layout="@layout/layout_shimmer_live_item_channel" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </com.facebook.shimmer.ShimmerFrameLayout>
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

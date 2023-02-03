@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutTicketItemSetting_ticketCL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/background_transparent_item_setting"
+        android:orientation="horizontal"
+        android:layoutDirection="rtl"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/shimmer_placeholder"
+
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/imageview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageview"
+            app:layout_constraintTop_toTopOf="@+id/imageview">
+
+            <TextView
+                android:id="@+id/layoutTicketItemSetting_titleTv"
+                android:layout_width="100dp"
+                android:layout_height="15dp"
+                android:background="@color/shimmer_placeholder"
+                android:focusable="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/layoutTicketItemSetting_statusTv"
+                android:layout_width="150dp"
+                android:layout_height="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/shimmer_placeholder"
+                android:focusable="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="15dp" />
+
+
+            <TextView
+                android:id="@+id/layoutTicketItemSetting_departmentTv"
+                android:layout_width="200dp"
+                android:layout_height="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/shimmer_placeholder"
+                android:focusable="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:padding="3dp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="15dp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="shortcut_background">#F5F5F5</color>
+
+    <color name="ui_controls_background">#98000000</color>
+    <color name="exo_bottom_bar_background" tools:keep="@color/exo_bottom_bar_background">@color/ui_controls_background</color>
+    <color name="exo_black_opacity_70" tools:keep="@color/exo_black_opacity_70">@color/ui_controls_background</color>
+    <color name="exo_styled_error_message_background" tools:keep="@color/exo_styled_error_message_background">@color/ui_controls_background</color>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <color name="green">#5ED142</color>
+    <color name="red">#D1424C</color>
+    <color name="transparent">#474747</color>
+    <color name="transparent_gray">#CD474747</color>
+
+    <color name="background_black">#212121</color>
+
+    <color name="dark_pink">#D46F71</color>
+    <color name="light_pink">#D58987</color>
+    <color name="dark_gray">#25282B</color>
+    <color name="light_gray">#32393D</color>
+    <color name="yellow">#FCBB00</color>
+    <color name="transparent_yellow">#94FCBB00</color>
+    <color name="shimmer_placeholder">#dddddd</color>
+
+</resources>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="rtl"
+        android:background="@drawable/background_login_dialog">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="تکمیل ثبت نام"
+            android:fontFamily="@font/estedad_light"
+            android:textAppearance="?textAppearanceBody1"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView19"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_logo"
+            app:layout_constraintEnd_toEndOf="@+id/textView6"
+            app:layout_constraintStart_toStartOf="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:padding="10dp"
+            android:fontFamily="@font/estedad_light"
+            android:text="لطفا موارد خواسته شده را تکمیل کنید. اگر از کاربرهای قبلی آریانا هستید حتما ایمیل خود را وارد کنید."
+            android:textAppearance="?textAppearanceBody2"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView19" />
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="@font/estedad_light"
+                    android:layout_marginBottom="5dp"
+                    android:text="نام"
+                    android:textColor="@color/white"
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/fragmentLoginCompleteInformationDialog_firstNameTI"
+                    style="Theme.ArianaFilm.AuthTheme.EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/edit_text_box_border"
+                    android:drawableStart="@drawable/ic_name_setting"
+                    android:drawablePadding="30dp"
+                    android:padding="15dp"
+                    android:fontFamily="@font/estedad_light"
+                    android:textColor="@color/white"
+                    android:textDirection="rtl" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/estedad_light"
+                    android:text="نام خانوادگی"
+                    android:textColor="@color/white"
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/fragmentLoginCompleteInformationDialog_lastNameTI"
+                    style="Theme.ArianaFilm.AuthTheme.EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/edit_text_box_border"
+                    android:drawableStart="@drawable/ic_last_name_setting"
+                    android:drawablePadding="30dp"
+                    android:fontFamily="@font/estedad_light"
+                    android:padding="15dp"
+                    android:textColor="@color/white"
+                    android:textDirection="rtl" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="نام کاربری"
+                    android:fontFamily="@font/estedad_light"
+                    android:textColor="@color/white"
+                    android:textSize="14dp" />
+
+
+                <EditText
+                    android:id="@+id/fragmentLoginCompleteInformationDialog_userNameTI"
+                    style="Theme.ArianaFilm.AuthTheme.EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/edit_text_box_border"
+                    android:drawableStart="@drawable/ic_username"
+                    android:drawablePadding="30dp"
+                    android:fontFamily="@font/estedad_light"
+                    android:padding="15dp"
+                    android:textColor="@color/white"
+                    android:textDirection="rtl" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="@font/estedad_light"
+                    android:layout_marginBottom="5dp"
+                    android:text="ایمیل"
+                    android:textColor="@color/white"
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/fragmentLoginCompleteInformationDialog_emailTI"
+                    style="Theme.ArianaFilm.AuthTheme.EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/estedad_light"
+                    android:background="@drawable/edit_text_box_border"
+                    android:drawableStart="@drawable/ic_email_setting"
+                    android:drawablePadding="30dp"
+                    android:padding="15dp"
+                    android:textColor="@color/white"
+                    android:textDirection="rtl" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <TextView
+            android:id="@+id/fragmentLoginCompleteInformationDialog_loginBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/background_red_button_setting"
+            android:backgroundTint="@color/yellow"
+            android:paddingStart="35dp"
+            android:paddingTop="8dp"
+            android:fontFamily="@font/estedad_light"
+            android:paddingEnd="35dp"
+            android:paddingBottom="8dp"
+            android:text="ثبت نام"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nestedScrollView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

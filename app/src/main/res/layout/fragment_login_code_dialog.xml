@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="rtl"
+        android:background="@drawable/background_login_dialog">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="ورود | ثبت نام"
+            android:fontFamily="@font/estedad_light"
+            android:textAppearance="?textAppearanceBody1"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView19"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_logo"
+            app:layout_constraintEnd_toEndOf="@+id/textView6"
+            app:layout_constraintStart_toStartOf="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:padding="10dp"
+            android:fontFamily="@font/estedad_light"
+            android:text="لطفا کد تایید ارسال شده را وارد کنید"
+            android:textAppearance="?textAppearanceBody2"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView19" />
+
+
+        <EditText
+            android:id="@+id/fragmentLoginCodeDialog_codeEditText"
+            style="Theme.ArianaFilm.AuthTheme.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:importantForAutofill="yes"
+            android:background="@drawable/edit_text_box_border"
+            android:drawableStart="@drawable/ic_phone_setting"
+            android:drawablePadding="20dp"
+            android:padding="10dp"
+            android:fontFamily="@font/estedad_light"
+            android:textDirection="rtl"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8"
+            android:inputType="number"/>
+
+        <TextView
+            android:id="@+id/fragmentLoginCodeDialog_sendCodeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="ارسال مجدد کد"
+            android:textAppearance="?textAppearanceBody2"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:fontFamily="@font/estedad_light"
+            app:layout_constraintStart_toStartOf="@+id/fragmentLoginCodeDialog_codeEditText"
+            app:layout_constraintTop_toBottomOf="@+id/fragmentLoginCodeDialog_codeEditText" />
+
+        <TextView
+            android:id="@+id/fragmentLoginCodeDialog_loginBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/background_red_button_setting"
+            android:backgroundTint="@color/yellow"
+            android:paddingStart="20dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="8dp"
+            android:text="ورود یا ثبت نام"
+            android:fontFamily="@font/estedad_light"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragmentLoginCodeDialog_sendCodeBtn" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

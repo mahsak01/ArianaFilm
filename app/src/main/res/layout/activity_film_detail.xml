@@ -1,0 +1,987 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_screen"
+        android:layoutDirection="rtl">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/activityFilmDetail_appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/background_transparent_item_setting"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="3dp"
+                android:src="@drawable/ic_logo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <LinearLayout
+                android:id="@+id/activityFilmDetail_backBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:nextFocusLeft="@id/activityFilmDetail_imbdIv"
+                android:nextFocusRight="@+id/activityFilmDetail_backBtn"
+                android:nextFocusUp="@+id/activityFilmDetail_backBtn"
+                android:nextFocusDown="@id/activityFilmDetail_imbdIv"
+                android:padding="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_back1_setting" />
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/activityFilmDetail_appBar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/activityFilmDetail_bannerCl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/activityFilmDetail_bannerIv"
+                        android:layout_width="match_parent"
+                        android:layout_height="240dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/background_button_setting"
+                        android:foreground="@drawable/background_button_setting"
+                        android:foregroundTint="@color/transparent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/background_cover_film"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <ImageView
+                        android:id="@+id/activityFilmDetail_imageIv"
+                        android:layout_width="140dp"
+                        android:layout_height="200dp"
+                        android:layout_margin="15dp"
+                        android:layout_marginStart="16dp"
+                        android:background="@drawable/background_button_setting"
+                        android:backgroundTint="@color/transparent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/background_item"
+                        app:layout_constraintBottom_toBottomOf="@+id/activityFilmDetail_bannerIv"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/activityFilmDetail_bannerIv" />
+
+                    <TextView
+                        android:id="@+id/activityFilmDetail_subTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/background_red_button_setting"
+                        android:backgroundTint="@color/green"
+                        android:fontFamily="@font/estedad_light"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="3dp"
+                        android:text="دوبله"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="10dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/activityFilmDetail_imageIv"
+                        app:layout_constraintEnd_toEndOf="@+id/activityFilmDetail_imageIv"
+                        app:layout_constraintStart_toStartOf="@+id/activityFilmDetail_imageIv" />
+
+                    <TextView
+                        android:id="@+id/activityFilmDetail_enFilmTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="اسم فیلم"
+                        android:textColor="@color/white"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toEndOf="@+id/activityFilmDetail_imageIv"
+                        app:layout_constraintTop_toTopOf="@+id/activityFilmDetail_imageIv" />
+
+                    <TextView
+                        android:id="@+id/activityFilmDetail_yearFilmTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:text="اسم فیلم"
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+
+                        app:layout_constraintStart_toStartOf="@+id/activityFilmDetail_enFilmTv"
+                        app:layout_constraintTop_toBottomOf="@+id/activityFilmDetail_enFilmTv" />
+
+                    <LinearLayout
+                        android:id="@+id/activityFilmDetail_imbdIv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:nextFocusLeft="@id/activityFilmDetail_rtIv"
+
+                        android:nextFocusRight="@+id/activityFilmDetail_backBtn"
+                        android:nextFocusUp="@+id/activityFilmDetail_backBtn"
+                        android:nextFocusDown="@id/activityFilmDetail_rtIv"
+                        android:padding="8dp"
+                        app:layout_constraintStart_toStartOf="@+id/activityFilmDetail_yearFilmTv"
+                        app:layout_constraintTop_toBottomOf="@+id/activityFilmDetail_yearFilmTv">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_imdb" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/activityFilmDetail_rtIv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:nextFocusLeft="@id/activityFilmDetail_playBtn"
+                        android:nextFocusRight="@+id/activityFilmDetail_imbdIv"
+                        android:nextFocusUp="@+id/activityFilmDetail_imbdIv"
+                        android:nextFocusDown="@id/activityFilmDetail_playBtn"
+                        android:padding="8dp"
+                        app:layout_constraintEnd_toEndOf="@+id/activityFilmDetail_imbdIv"
+                        app:layout_constraintStart_toStartOf="@+id/activityFilmDetail_imbdIv"
+                        app:layout_constraintTop_toBottomOf="@+id/activityFilmDetail_imbdIv">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:src="@drawable/ic_rt" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="@+id/activityFilmDetail_imageIv"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/activityFilmDetail_rtIv"
+                        app:layout_constraintTop_toBottomOf="@+id/activityFilmDetail_rtIv">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="9">
+
+                            <TextView
+                                android:id="@+id/activityFilmDetail_countryTv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"
+                                android:drawableStart="@drawable/ic_country"
+                                android:drawablePadding="5dp"
+                                android:fontFamily="@font/estedad_light"
+                                android:text="کشور: آمریکا"
+                                android:textColor="@color/white"
+                                android:textDirection="rtl"
+                                android:textSize="12dp" />
+
+
+                            <TextView
+                                android:id="@+id/activityFilmDetail_ageTv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"
+                                android:drawableStart="@drawable/ic_age_film_detail"
+                                android:drawablePadding="5dp"
+                                android:fontFamily="@font/estedad_light"
+                                android:text="رده سنی : pg"
+                                android:textColor="@color/white"
+                                android:textDirection="rtl"
+                                android:textSize="12dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="9">
+
+                            <TextView
+                                android:id="@+id/activityFilmDetail_hourTv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"
+                                android:drawableStart="@drawable/ic_time"
+                                android:drawablePadding="10dp"
+                                android:fontFamily="@font/estedad_light"
+                                android:text="200 دقیقه"
+                                android:textColor="@color/white"
+                                android:textDirection="rtl"
+                                android:textSize="12dp" />
+
+                            <TextView
+                                android:id="@+id/activityFilmDetail_languageTv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"
+                                android:drawableStart="@drawable/ic_language"
+                                android:drawablePadding="10dp"
+                                android:fontFamily="@font/estedad_light"
+                                android:text="زبان : انگلیسی"
+                                android:textColor="@color/white"
+                                android:textDirection="rtl"
+                                android:textSize="12dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="9">
+
+                            <TextView
+                                android:id="@+id/activityFilmDetail_subtitleTv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"
+                                android:drawableStart="@drawable/ic_subtitle"
+                                android:drawablePadding="10dp"
+                                android:fontFamily="@font/estedad_light"
+                                android:text="زیرنویس : دارد"
+                                android:textColor="@color/white"
+                                android:textDirection="rtl"
+                                android:textSize="12dp" />
+
+                            <TextView
+                                android:id="@+id/activityFilmDetail_infoTv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"
+                                android:drawableStart="@drawable/ic_info"
+                                android:drawablePadding="10dp"
+                                android:fontFamily="@font/estedad_light"
+                                android:text="چند زبانه"
+                                android:textColor="@color/white"
+                                android:textDirection="rtl"
+                                android:textSize="12dp" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/activityFilmDetail_bannerShimmer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@color/shimmer_placeholder"
+                        android:padding="10dp" />
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/activityFilmDetail_notificationIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:nextFocusLeft="@id/activityFilmDetail_saveIv"
+                            android:nextFocusRight="@+id/activityFilmDetail_playBtn"
+                            android:nextFocusUp="@+id/activityFilmDetail_rtIv"
+                            android:nextFocusDown="@id/activityFilmDetail_ItemRG"
+                            android:padding="5dp"
+                            android:src="@drawable/ic_notification_film_detail" />
+
+                        <ImageView
+                            android:id="@+id/activityFilmDetail_saveIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:nextFocusLeft="@id/activityFilmDetail_likeIv"
+                            android:nextFocusRight="@+id/activityFilmDetail_notificationIv"
+                            android:nextFocusUp="@+id/activityFilmDetail_rtIv"
+                            android:nextFocusDown="@id/activityFilmDetail_ItemRG"
+                            android:padding="5dp"
+                            android:src="@drawable/ic_saved_film_detail" />
+
+                        <ImageView
+                            android:id="@+id/activityFilmDetail_likeIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:nextFocusLeft="@id/activityFilmDetail_downloadTv"
+                            android:nextFocusRight="@+id/activityFilmDetail_saveIv"
+                            android:nextFocusUp="@+id/activityFilmDetail_rtIv"
+                            android:nextFocusDown="@id/activityFilmDetail_ItemRG"
+                            android:padding="5dp"
+                            android:src="@drawable/ic_like_film_detail" />
+
+                        <ImageView
+                            android:id="@+id/activityFilmDetail_downloadTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:nextFocusLeft="@id/activityFilmDetail_ItemRG"
+                            android:nextFocusRight="@+id/activityFilmDetail_likeIv"
+                            android:nextFocusUp="@+id/activityFilmDetail_rtIv"
+                            android:nextFocusDown="@id/activityFilmDetail_ItemRG"
+                            android:padding="5dp"
+                            android:src="@drawable/ic_download" />
+
+                        <ProgressBar
+                            android:id="@+id/activityFilmDetail_downloadPb"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/activityFilmDetail_playBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_red_button_setting"
+                        android:drawableEnd="@drawable/ic_play"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/estedad_light"
+                        android:nextFocusLeft="@id/activityFilmDetail_notificationIv"
+                        android:nextFocusRight="@+id/activityFilmDetail_rtIv"
+                        android:nextFocusUp="@+id/activityFilmDetail_rtIv"
+                        android:nextFocusDown="@id/activityFilmDetail_notificationIv"
+                        android:paddingStart="15dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:text="تماشا کنید"
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <RadioGroup
+                    android:id="@+id/activityFilmDetail_ItemRG"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <RadioButton
+                        android:id="@+id/activityFilmDetail_infoFilmRB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/radio_flat_selector"
+                        android:button="@android:color/transparent"
+                        android:checked="true"
+                        android:fontFamily="@font/estedad_light"
+                        android:gravity="center"
+                        android:paddingStart="20dp"
+                        android:paddingTop="4dp"
+                        android:paddingEnd="20dp"
+                        android:paddingBottom="4dp"
+                        android:text="داستان فیلم"
+                        android:textColor="@color/white" />
+
+                    <RadioButton
+                        android:id="@+id/activityFilmDetail_BannerFilmItemRB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/radio_flat_selector"
+                        android:button="@android:color/transparent"
+                        android:fontFamily="@font/estedad_light"
+                        android:gravity="center"
+                        android:paddingStart="20dp"
+                        android:paddingTop="4dp"
+                        android:paddingEnd="20dp"
+                        android:paddingBottom="4dp"
+                        android:text="بنر ها"
+                        android:textColor="@color/white" />
+
+                    <RadioButton
+                        android:id="@+id/activityFilmDetail_PlayerFilmItemRB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/radio_flat_selector"
+                        android:button="@android:color/transparent"
+                        android:fontFamily="@font/estedad_light"
+                        android:gravity="center"
+                        android:paddingStart="20dp"
+                        android:paddingTop="4dp"
+                        android:paddingEnd="20dp"
+                        android:paddingBottom="4dp"
+                        android:text="تریلر"
+                        android:textColor="@color/white" />
+                </RadioGroup>
+
+
+                <LinearLayout
+                    android:id="@+id/activityFilmDetail_filmDescriptionLl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/activityFilmDetail_filmDescriptionTitleTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/estedad_light"
+                        android:text="داستان فیلم"
+                        android:textColor="@color/white"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/activityFilmDetail_filmDescriptionTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_text_view_descripation"
+                        android:backgroundTint="@color/transparent"
+                        android:fontFamily="@font/estedad_light"
+                        android:minHeight="80dp"
+                        android:padding="10dp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/activityFilmDetail_filmDescriptionTvShimmer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/background_text_view_descripation"
+                        android:backgroundTint="@color/shimmer_placeholder"
+                        android:fontFamily="@font/estedad_light"
+                        android:padding="10dp" />
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/activityFilmDetail_bannerSliderLl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/activityFilmDetail_bannerSliderTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/estedad_light"
+                        android:text="بنر ها"
+                        android:textColor="@color/white"
+                        android:textSize="16dp" />
+
+
+                    <LinearLayout
+                        android:id="@+id/activityFilmDetail_bannerSliderClLL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/activityFilmDetail_bannerSliderCl"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
+
+                            <androidx.viewpager2.widget.ViewPager2
+                                android:id="@+id/activityFilmDetail_bannerSliderVp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+                            android:id="@+id/activityFilmDetail_bannerSliderDi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/background_red_button_setting"
+                            android:backgroundTint="@color/transparent"
+                            android:padding="5dp"
+                            app:dotsColor="@color/white"
+                            app:dotsCornerRadius="8dp"
+                            app:dotsSize="7dp"
+                            app:dotsSpacing="3dp"
+                            app:dotsWidthFactor="1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/frameLayout"
+                            app:progressMode="false"
+                            app:selectedDotColor="@color/red" />
+                    </LinearLayout>
+
+
+                    <com.facebook.shimmer.ShimmerFrameLayout
+                        android:id="@+id/activityFilmDetail_bannerSliderShimmer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="20dp"
+                            android:background="@color/shimmer_placeholder"
+                            android:padding="10dp" />
+                    </com.facebook.shimmer.ShimmerFrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/activityFilmDetail_PlayerLl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/activityFilmDetail_idExoPlayerTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/estedad_light"
+                        android:text="تریلر"
+                        android:textColor="@color/white"
+                        android:textSize="16dp" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/activityFilmDetail_idExoPlayerCl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/activityFilmDetail_idExoPlayerIv"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:scaleType="centerCrop"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <ImageView
+                            android:id="@+id/activityFilmDetail_idExoPlayerFullScreenBtn"
+                            android:layout_width="72dp"
+                            android:layout_height="72dp"
+                            android:src="@drawable/ic_play"
+                            app:layout_constraintBottom_toBottomOf="@+id/activityFilmDetail_idExoPlayerIv"
+                            app:layout_constraintEnd_toEndOf="@+id/activityFilmDetail_idExoPlayerIv"
+                            app:layout_constraintStart_toStartOf="@+id/activityFilmDetail_idExoPlayerIv"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <com.facebook.shimmer.ShimmerFrameLayout
+                        android:id="@+id/activityFilmDetail_idExoPlayerShimmer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="20dp"
+                            android:background="@color/shimmer_placeholder"
+                            android:padding="10dp" />
+                    </com.facebook.shimmer.ShimmerFrameLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/activityFilmDetail_seasonBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/background_button_setting"
+                        android:backgroundTint="@color/transparent"
+                        android:fontFamily="@font/estedad_light"
+                        android:text="لیست فصل ها"
+                        android:textAlignment="center"
+                        android:textSize="20dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/activityFilmDetail_actorTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/estedad_light"
+                    android:text="بازیگران"
+                    android:textColor="@color/white"
+                    android:textSize="16dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/activityFilmDetail_actorRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:horizontalSpacing="5dp"
+                    android:scrollbars="horizontal"
+                    android:verticalSpacing="5dp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/activityFilmDetail_actorRvShimmer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:horizontalSpacing="5dp"
+                        android:scrollbars="horizontal"
+                        android:verticalSpacing="5dp">
+
+                        <include layout="@layout/layout_shimmer_actor_item_home_page" />
+
+                        <include layout="@layout/layout_shimmer_actor_item_home_page" />
+
+                        <include layout="@layout/layout_shimmer_actor_item_home_page" />
+
+                        <include layout="@layout/layout_shimmer_actor_item_home_page" />
+
+                        <include layout="@layout/layout_shimmer_actor_item_home_page" />
+
+                        <include layout="@layout/layout_shimmer_actor_item_home_page" />
+
+                        <include layout="@layout/layout_shimmer_actor_item_home_page" />
+
+                        <include layout="@layout/layout_shimmer_actor_item_home_page" />
+
+                        <include layout="@layout/layout_shimmer_actor_item_home_page" />
+
+                        <include layout="@layout/layout_shimmer_actor_item_home_page" />
+
+                        <include layout="@layout/layout_shimmer_actor_item_home_page" />
+
+                    </LinearLayout>
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                <TextView
+                    android:id="@+id/activityFilmDetail_workerTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/estedad_light"
+                    android:text="سایر عوامل"
+                    android:textColor="@color/white"
+                    android:textSize="16dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/activityFilmDetail_workerRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:horizontalSpacing="5dp"
+                    android:scrollbars="horizontal"
+                    android:verticalSpacing="5dp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/activityFilmDetail_workerRvShimmer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:horizontalSpacing="5dp"
+                        android:scrollbars="horizontal"
+                        android:verticalSpacing="5dp">
+
+                        <include layout="@layout/layout_shimmer_actor_item_home_page" />
+
+                        <include layout="@layout/layout_shimmer_actor_item_home_page" />
+
+                        <include layout="@layout/layout_shimmer_actor_item_home_page" />
+
+                        <include layout="@layout/layout_shimmer_actor_item_home_page" />
+
+                        <include layout="@layout/layout_shimmer_actor_item_home_page" />
+
+                        <include layout="@layout/layout_shimmer_actor_item_home_page" />
+
+                        <include layout="@layout/layout_shimmer_actor_item_home_page" />
+
+                        <include layout="@layout/layout_shimmer_actor_item_home_page" />
+
+                        <include layout="@layout/layout_shimmer_actor_item_home_page" />
+
+                        <include layout="@layout/layout_shimmer_actor_item_home_page" />
+
+                        <include layout="@layout/layout_shimmer_actor_item_home_page" />
+
+                    </LinearLayout>
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                <TextView
+                    android:id="@+id/activityFilmDetail_moviesTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/estedad_light"
+                    android:text="فیلم های مرتبط"
+                    android:textColor="@color/white"
+                    android:textSize="16dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/activityFilmDetail_moviesRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:horizontalSpacing="5dp"
+                    android:scrollbars="horizontal"
+                    android:verticalSpacing="5dp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/activityFilmDetail_moviesRvShimmer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:horizontalSpacing="5dp"
+                        android:scrollbars="horizontal"
+                        android:verticalSpacing="5dp">
+
+                        <include layout="@layout/layout_shimmer_film_item_home_page" />
+
+                        <include layout="@layout/layout_shimmer_film_item_home_page" />
+
+                        <include layout="@layout/layout_shimmer_film_item_home_page" />
+
+                        <include layout="@layout/layout_shimmer_film_item_home_page" />
+
+                        <include layout="@layout/layout_shimmer_film_item_home_page" />
+
+                        <include layout="@layout/layout_shimmer_film_item_home_page" />
+
+                        <include layout="@layout/layout_shimmer_film_item_home_page" />
+
+                        <include layout="@layout/layout_shimmer_film_item_home_page" />
+
+                        <include layout="@layout/layout_shimmer_film_item_home_page" />
+
+                        <include layout="@layout/layout_shimmer_film_item_home_page" />
+                    </LinearLayout>
+
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/estedad_light"
+                    android:text="دیدگاه ها"
+                    android:textColor="@color/white"
+                    android:textSize="16dp" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_box_border"
+                    android:minHeight="50dp">
+
+                    <EditText
+                        android:id="@+id/activityFilmDetail_commentTI"
+                        style="Theme.ArianaFilm.AuthTheme.EditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/edit_text_box_border_no_color"
+                        android:drawableTint="@color/white"
+                        android:fontFamily="@font/estedad_light"
+                        android:hint="دیدگاه شما"
+                        android:minHeight="50dp"
+                        android:padding="15dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textDirection="rtl"
+                        android:textSize="15dp"
+                        app:layout_constraintEnd_toStartOf="@+id/activityFilmDetail_sendIv"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/activityFilmDetail_sendIv"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/ic_round_send_24"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/white" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/activityFilmDetail_commentsRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:horizontalSpacing="5dp"
+                    android:verticalSpacing="5dp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/activityFilmDetail_commentsRvShimmer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:horizontalSpacing="5dp"
+                        android:orientation="vertical"
+                        android:verticalSpacing="5dp">
+
+                        <include layout="@layout/layout_shimmer_comment_item" />
+
+                        <include layout="@layout/layout_shimmer_comment_item" />
+
+                        <include layout="@layout/layout_shimmer_comment_item" />
+
+                        <include layout="@layout/layout_shimmer_comment_item" />
+
+                    </LinearLayout>
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutSavedFilmGroupItem_itemCl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layoutDirection="rtl"
+        android:layout_margin="10dp"
+        android:background="@drawable/background_transparent_item_setting">
+
+        <ImageView
+            android:id="@+id/layoutSavedFilmGroupItem_emptyIv"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/shimmer_placeholder"
+            android:scaleType="centerCrop"
+            android:src="@drawable/background_item"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/layoutSavedFilmGroupItem_numberOfItem"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutSavedFilmGroupItem_titleTv" />
+
+        <LinearLayout
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:id="@+id/layoutSavedFilmGroupItem_itemsIv"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:weightSum="2"
+            app:layout_constraintBottom_toTopOf="@+id/layoutSavedFilmGroupItem_numberOfItem"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutSavedFilmGroupItem_titleTv">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <ImageView
+                    android:id="@+id/layoutSavedFilmGroupItem_item1Iv"
+                    android:layout_width="0dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/shimmer_placeholder"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/layoutSavedFilmGroupItem_item2Iv"
+                    android:layout_width="0dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/shimmer_placeholder"
+                    android:scaleType="centerCrop" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/layoutSavedFilmGroupItem_item3Iv"
+                    android:layout_width="0dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/shimmer_placeholder"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/layoutSavedFilmGroupItem_item4Iv"
+                    android:layout_width="0dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/shimmer_placeholder"
+                    android:scaleType="centerCrop"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/layoutSavedFilmGroupItem_titleTv"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/shimmer_placeholder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/layoutSavedFilmGroupItem_numberOfItem"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/shimmer_placeholder"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

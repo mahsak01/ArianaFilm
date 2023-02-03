@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true"
+        android:drawable="@drawable/background_border_yellow_border" /> <!-- pressed -->
+    <item android:state_focused="true"
+        android:drawable="@drawable/background_border_white_border" /> <!-- focused -->
+    <item android:state_hovered="true"
+        android:drawable="@drawable/background_border_white_border" /> <!-- hovered -->
+    <item android:drawable="@drawable/background_border_transparent_button" /> <!-- default -->
+</selector>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment2">
+
+    <include app:graph="@navigation/home" />
+    <include app:graph="@navigation/serial" />
+    <include app:graph="@navigation/category" />
+    <include app:graph="@navigation/live" />
+    <include app:graph="@navigation/film" />
+
+
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.mgpersia.androidbox.Fragment.CategoryFragment"
+        android:label="CategoryFragment"
+        tools:layout="@layout/fragment_category">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/liveFragment"
+        android:name="com.mgpersia.androidbox.Fragment.LiveFragment"
+        android:label="LiveFragment" />
+
+
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.mgpersia.androidbox.Fragment.HomeFragment"
+        android:label="HomeFragment" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/allFilmFragment"
+        android:name="com.mgpersia.androidbox.Fragment.AllFilmFragment"
+        android:label="AllFilmFragment" />
+    <fragment
+        android:id="@+id/allSerialFragment2"
+        android:name="com.mgpersia.androidbox.Fragment.AllSerialFragment"
+        android:label="AllSerialFragment" />
+
+
+</navigation>

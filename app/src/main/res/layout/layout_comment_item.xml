@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutComments_itemCl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/background_button_setting"
+            android:backgroundTint="@color/transparent"
+            android:layoutDirection="rtl"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/layoutComments_avatorIv"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/ic_circle_logo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/layoutComments_authorTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/estedad_light"
+                android:text="دیدگاه شما"
+                android:textColor="@color/white"
+                android:textSize="13dp"
+                app:layout_constraintStart_toEndOf="@+id/layoutComments_avatorIv"
+                app:layout_constraintTop_toTopOf="@+id/layoutComments_avatorIv" />
+
+            <TextView
+                android:id="@+id/layoutComments_dateTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/estedad_light"
+                android:text="دیدگاه شما"
+                android:textColor="@color/white"
+                android:textSize="13dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/layoutComments_authorTv" />
+
+            <TextView
+                android:id="@+id/layoutComments_textTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/estedad_light"
+                android:paddingBottom="16dp"
+                android:text="ادمین"
+                android:textColor="@color/white"
+                android:textDirection="rtl"
+                android:textSize="13dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/layoutComments_authorTv"
+                app:layout_constraintTop_toBottomOf="@+id/layoutComments_authorTv" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutComments_answerCl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/background_text_view_descripation"
+                android:backgroundTint="@color/background_black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/layoutComments_textTv"
+                app:layout_constraintStart_toStartOf="@+id/layoutComments_textTv"
+                app:layout_constraintTop_toBottomOf="@+id/layoutComments_textTv">
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/estedad_light"
+                    android:text="ادمین"
+                    android:textColor="@color/white"
+                    android:textSize="13dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/layoutComments_answerTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/estedad_light"
+                    android:textColor="@color/white"
+                    android:textSize="13dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView16"
+                    app:layout_constraintTop_toBottomOf="@+id/textView16" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

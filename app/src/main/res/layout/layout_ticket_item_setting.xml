@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutTicketItemSetting_ticketCL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/background_transparent_item_setting"
+        android:orientation="horizontal"
+        android:layoutDirection="rtl"
+        android:padding="8dp">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieAnimationView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/animation_chat"
+            app:lottie_speed="1"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/lottieAnimationView"
+            app:layout_constraintStart_toEndOf="@+id/lottieAnimationView"
+            app:layout_constraintTop_toTopOf="@+id/lottieAnimationView">
+
+            <TextView
+                android:id="@+id/layoutTicketItemSetting_titleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="موضوع : تست"
+                android:fontFamily="@font/estedad_light"
+                android:focusable="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:padding="5dp"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/layoutTicketItemSetting_statusTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:text="وضعیت : باز"
+                android:fontFamily="@font/estedad_light"
+                android:padding="3dp"
+                android:textColor="@color/white"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/layoutTicketItemSetting_departmentTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:fontFamily="@font/estedad_light"
+                android:text="دپارتمان : بخش فنی"
+                android:padding="3dp"
+                android:textColor="@color/white"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
